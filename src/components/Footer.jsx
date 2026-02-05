@@ -13,7 +13,7 @@ const Footer = () => {
                 </div>
 
                 <p className="text-slate-600 text-sm">
-                    © {new Date().getFullYear()} LinguaLab. Built for React Learning.
+                    © {new Date().getFullYear()} LinguaLab. Built by Archit Bagayatkar.
                 </p>
             </div>
         </footer>

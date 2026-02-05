@@ -53,7 +53,7 @@ const About = () => {
                         <Github size={24} />
                     </div>
                     <div>
-                        <h3 className="text-lg font-bold text-white mb-2">Developed by QSkill Intern</h3>
+                        <h3 className="text-lg font-bold text-white mb-2">Developed by Archit Bagayatkar</h3>
                         <p className="text-slate-400 text-sm mb-4">
                             This project was built as part of the QSkill Front-End Development Internship program logic & implementation tasks.
                         </p>
