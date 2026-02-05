@@ -19,11 +19,18 @@ A single-page React application providing text-based utilities including a langu
 - **Customizable:** Toggle uppercase, lowercase, numbers, and special characters.
 - **History:** Keeps track of recently generated strings.
 
+### 🛡️ Robust Architecture
+
+- **Global Error Handling:** Application wrapped in a React Error Boundary to prevent crashes.
+- **Input Validation:** Real-time feedback for empty inputs and invalid configurations.
+- **Fail-Safe Design:** Graceful fallbacks for network errors and API limits.
+
 ### ⚡ Technical Highlights
 
 - **Client-Side Routing:** seamless navigation with `react-router-dom`.
 - **Custom Hooks:** Logic abstraction (e.g., `useRandomString`).
 - **Glassmorphism UI:** Modern, responsive design using Tailwind CSS.
+- **Defensive Programming:** Comprehensive validation and error management systems.
 
 ## 🛠️ Tech Stack
 
@@ -69,7 +76,7 @@ npm run dev
 
 ```
 src/
- ├─ components/   # Reusable UI components (Navbar, InputPanel, etc.)
+ ├─ components/   # Reusable UI including ErrorBoundary & Layouts
  ├─ pages/        # Route components (Home, Translator, Generator)
  ├─ hooks/        # Custom hooks logic
  ├─ routes/       # Routing configuration
@@ -86,4 +93,4 @@ src/
 
 ---
 
-Developed by **Archit** | QSkill Internship Project
+Developed by **Archit Bagayatkar** | QSkill Internship Project
