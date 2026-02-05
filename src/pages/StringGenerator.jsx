@@ -15,7 +15,17 @@ const StringGenerator = () => {
 
   const [copied, setCopied] = useState(false);
 
+  const [error, setError] = useState('');
+
   const handleGenerate = () => {
+    // Validation: Check if at least one option is selected
+    if (!Object.values(options).some(Boolean)) {
+      setError('CONFIGURATION ERROR: Select at least one character type.');
+      setTimeout(() => setError(''), 3000);
+      return;
+    }
+    
+    setError('');
     generateString({ length, options });
     setCopied(false);
   };
@@ -85,12 +95,20 @@ const StringGenerator = () => {
               ))}
             </div>
 
-            <button 
-              onClick={handleGenerate}
-              className="w-full mt-6 py-3 bg-gradient-to-r from-hologram to-cyan-600 text-black font-bold font-mono tracking-widest rounded-lg hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] transition-all active:scale-95"
-            >
-              GENERATE
-            </button>
+            <div className="mt-8">
+              {error && (
+                <div className="mb-4 p-3 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400 text-xs font-mono text-center animate-pulse">
+                  {error}
+                </div>
+              )}
+
+              <button 
+                onClick={handleGenerate}
+                className="w-full py-3 bg-gradient-to-r from-hologram to-cyan-600 text-black font-bold font-mono tracking-widest rounded-lg hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] transition-all active:scale-95"
+              >
+                GENERATE
+              </button>
+            </div>
           </div>
 
           <div className="glass-panel p-6 rounded-xl border border-white/10">

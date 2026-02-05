@@ -53,7 +53,7 @@ function Translator() {
 
   const handleTranslate = async () => {
     if (!inputText.trim()) {
-      setError('NO INPUT SIGNAL DETECTED. PLEASE ENTER DATA.');
+      setError('INPUT REQUIRED: Please enter text to initiate translation sequence.');
       setTimeout(() => setError(''), 3000);
       return;
     }
@@ -105,7 +105,7 @@ function Translator() {
       }
     } catch (err) {
       console.error(err);
-      setError('FREQUENCY INTERFERENCE DETECTED. UNABLE TO CONNECT TO NEURAL LINK.');
+      setError('CONNECTION FAILURE: Unable to reach translation mainframe. Check network status.');
     } finally {
       setIsLoading(false);
     }
