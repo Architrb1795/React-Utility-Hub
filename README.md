@@ -1,82 +1,89 @@
-# LinguaSignal 🌌
+# React Utility Hub (LinguaLab)
 
-**LinguaSignal** is a futuristic, high-fidelity translation interface built with React and Tailwind CSS. It combines advanced translation capabilities with an immersive "Deep Void" sci-fi aesthetic, featuring glassmorphism, holographic accents, and interactive animations.
+**Theme:** Text Intelligence Toolkit  
+A single-page React application providing text-based utilities including a language translator and a random string generator. Built to demonstrate advanced React concepts, client-side routing, and modern UI design.
 
-![LinguaSignal Interface](public/WebScreenshot.png)
+![React](https://img.shields.io/badge/React-18-blue) ![Vite](https://img.shields.io/badge/Vite-5-purple) ![Tailwind](https://img.shields.io/badge/Tailwind-3-cyan)
 
-## ✨ Features
+## 🚀 Features
 
-- **Interstellar UI**: A stunning visual experience with mesh gradients, neon accents, and custom "Rajdhani" typography.
-- **Smart Language Intelligence**:
-  - **Auto-Detect**: Automatically identifies the source language.
-  - **Smart Selector**: Searchable dropdown with over 50 languages and flag icons.
-- **Real-Time Translation**: Powered by Google Translate API (via RapidAPI).
-- **Simulation Mode**: Included fallback mode that simulates translation (reverses text) if no API key is provided—perfect for testing UI/UX.
-- **Advanced Output**:
-  - **Matrix Decoding**: Characters cascade into place for a sci-fi decoding effect.
-  - **Export Protocol**: Download translations as `.txt` files or copy to clipboard instantly.
-- **History Log**: LocalStorage-persisted history panel to track and restore previous transmissions.
+### 🌐 Text Translator
+
+- **Frequency Translation:** Convert text between multiple languages using the Google Translate API (via RapidAPI).
+- **Auto-Detection:** Automatically detects source language.
+- **History:** Saves your recent translations locally.
+
+### 🔢 String Generator
+
+- **Secure Tokens:** Generate random strings for passwords or API keys.
+- **Customizable:** Toggle uppercase, lowercase, numbers, and special characters.
+- **History:** Keeps track of recently generated strings.
+
+### ⚡ Technical Highlights
+
+- **Client-Side Routing:** seamless navigation with `react-router-dom`.
+- **Custom Hooks:** Logic abstraction (e.g., `useRandomString`).
+- **Glassmorphism UI:** Modern, responsive design using Tailwind CSS.
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [React](https://react.dev/) + [Vite](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **HTTP Client**: [Axios](https://axios-http.com/)
+- **Frontend:** React, Vite
+- **Styling:** Tailwind CSS, Framer Motion
+- **Routing:** React Router DOM v6
+- **API:** Axiios, RapidAPI (Google Translate)
+- **Icons:** Lucide React
 
-## 🚀 Getting Started
+## 📦 Getting Started
 
-### Prerequisites
+### 1. Clone the Repository
 
-- Node.js (v18 or higher)
-- npm or yarn
+```bash
+git clone https://github.com/Architrb1795/React-Utility-Hub.git
+cd React-Utility-Hub
+```
 
-### Installation
+### 2. Install Dependencies
 
-1.  **Clone the repository**:
+```bash
+npm install
+```
 
-    ```bash
-    git clone https://github.com/Architrb1795/LinguaSignal-TranslatorApp.git
-    cd LinguaSignal-TranslatorApp
-    ```
+### 3. Environment Setup
 
-2.  **Install dependencies**:
+Create a `.env` file in the root directory and add your RapidAPI credentials:
 
-    ```bash
-    npm install
-    ```
+```env
+VITE_RAPIDAPI_KEY=your_rapidapi_key_here
+VITE_RAPIDAPI_HOST=google-translate113.p.rapidapi.com
+```
 
-3.  **Configure Environment Variables**:
-    - Create a `.env` file in the root directory.
-    - Add your RapidAPI key (Optional - see Simulation Mode below).
+> **Note:** Without an API key, the app runs in **Simulation Mode** (mock data).
 
-    ```env
-    VITE_RAPIDAPI_KEY=your_rapidapi_key_here
-    VITE_RAPIDAPI_HOST=google-translate113.p.rapidapi.com
-    ```
+### 4. Run Locally
 
-    > **Note**: You can get a free key from [RapidAPI's Google Translate API](https://rapidapi.com/googlecloud/api/google-translate1).
+```bash
+npm run dev
+```
 
-4.  **Run the Development Server**:
+## 📂 Project Structure
 
-    ```bash
-    npm run dev
-    ```
+```
+src/
+ ├─ components/   # Reusable UI components (Navbar, InputPanel, etc.)
+ ├─ pages/        # Route components (Home, Translator, Generator)
+ ├─ hooks/        # Custom hooks logic
+ ├─ routes/       # Routing configuration
+ └─ utils/        # Helper functions and constants
+```
 
-5.  Open [http://localhost:5173](http://localhost:5173) in your browser.
+## 🤝 Contributing
 
-## 🎮 Usage
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-1.  **Input**: Type text into the "Origin Transmission" panel.
-2.  **Target**: Select your desired language from the "Target Frequency" dropdown (English is default).
-3.  **Translate**: Press `Ctrl + Enter` or click the **INITIATE SEQUENCE** button.
-4.  **History**: Click the clock icon on the left to view and restore past translations.
+---
 
-## 🛡️ Security
-
-This project uses a `.env` file to manage sensitive API keys. **Never commit your `.env` file to version control.** A `.gitignore` is included to prevent this.
-
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
+Developed by **Archit** | QSkill Internship Project
